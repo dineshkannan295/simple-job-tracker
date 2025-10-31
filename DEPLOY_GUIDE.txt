@@ -1,0 +1,9 @@
+=== SIMPLE JOB TRACKER DEPLOYMENT GUIDE ===
+
+1. Go to https://render.com
+2. Create a new Web Service and link your GitHub repo.
+3. Set the build command: npm install
+4. Set the start command: node server.js
+5. Deploy!
+
+App will automatically use SQLite database (stored in /data/jobs.db).
