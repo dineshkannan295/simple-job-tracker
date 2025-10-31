@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Job Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Simple Job Tracker</h1>
+
+    <form id="job-form">
+      <input placeholder="Job Ref No." id="ref_no" required />
+      <input placeholder="Importer / Client Name" id="client_name" required />
+      <input type="date" id="date_received" required />
+      <input placeholder="Allocated To" id="allocated_to" />
+      <select id="status">
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+      <input placeholder="Remarks" id="remarks" />
+      <button type="submit">Add Job</button>
+    </form>
+
+    <div class="filters">
+      <input id="search" placeholder="Search Ref / Client / Allocated" />
+      <select id="filter_status">
+        <option value="">All Status</option>
+        <option>Pending</option>
+        <option>In Progress</option>
+        <option>Completed</option>
+      </select>
+      <button id="refresh">Refresh</button>
+    </div>
+
+    <table id="jobs-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Ref No</th>
+          <th>Client</th>
+          <th>Date Received</th>
+          <th>Allocated To</th>
+          <th>Status</th>
+          <th>Remarks</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
